@@ -5,7 +5,7 @@ const List = ({ dataList }) => {
   const elements = dataList.map(item => {
     return (
       <li>
-        <ListItem />
+        <ListItem label={item.label} />
       </li>
     );
   });
