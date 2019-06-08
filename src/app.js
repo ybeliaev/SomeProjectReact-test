@@ -6,7 +6,11 @@ const App = () => {
     { label: "Drink vodka", importent: "false" },
     { label: "Read book", importent: "true" }
   ];
-  return <div />;
+  return (
+    <div>
+      <List dataList={dataList} />
+    </div>
+  );
 };
 
 export default App;
