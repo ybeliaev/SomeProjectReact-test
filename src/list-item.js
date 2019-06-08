@@ -1,4 +1,6 @@
 import React from "react";
 
-const ListItem = 
+const ListItem = ({ label }) => {
+  return <span>{label}</span>;
+};
 export default ListItem;
