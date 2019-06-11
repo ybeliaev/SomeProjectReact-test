@@ -2,7 +2,7 @@ import React from "react";
 
 export default class ListItem extends React.Component {
   labelClick() {
-    console.log(this.styleSpan["color"]);
+    console.log(this.props.label);
   }
   render() {
     const { label, important } = this.props;
@@ -11,7 +11,7 @@ export default class ListItem extends React.Component {
       color: important ? "tomato" : "black"
     };
     return (
-      <span style={styleSpan} onClick={this.labelClick}>
+      <span style={styleSpan} onClick={() => this.labelClick}>
         {label}
       </span>
     );
