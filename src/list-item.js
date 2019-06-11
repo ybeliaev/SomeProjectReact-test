@@ -6,7 +6,7 @@ const ListItem = ({ label, important = false }) => {
     color: important ? "tomato" : "black"
   };
   return (
-    <span style={styleSpan} onClick={() => console.log(`Click on ${label}`)}>
+    <span style={styleSpan} onClick={() => console.log(`Click on '${label}'`)}>
       {label}
     </span>
   );
