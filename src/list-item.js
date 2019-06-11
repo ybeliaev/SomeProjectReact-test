@@ -2,7 +2,7 @@ import React from "react";
 
 const ListItem = ({ label, important = false }) => {
   function labelClick() {
-    console.log(`Click on '${label}'`);
+    console.log({ styleSpan });
   }
   const styleSpan = {
     fontSize: important ? "30px" : "20px",
