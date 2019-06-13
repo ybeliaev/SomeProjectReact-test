@@ -1,5 +1,5 @@
 import React from "react";
-import "./list-item.css";
+
 export default class ListItem extends React.Component {
   state = {
     done: false
@@ -22,6 +22,7 @@ export default class ListItem extends React.Component {
     return (
       <span className={classNames} onClick={this.onLabelClick}>
         {label}
+        <button>DELETE ME</button>
       </span>
     );
   }

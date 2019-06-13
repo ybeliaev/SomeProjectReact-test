@@ -2,3 +2,7 @@
   font-family: sans-serif;
   text-align: center;
 }
+.done {
+  font-size: 30px;
+  color: tomato;
+}
