@@ -1,20 +1,26 @@
 import React from "react";
-
+import "./list-item.css";
 export default class ListItem extends React.Component {
   state = {
     done: false
   };
-  onLabelClick() {
-    console.log(this.props.label);
-  }
+  onLabelClick = () => {
+    this.setState(({ done }) => {
+      return {
+        done: !done
+      };
+    });
+  };
   render() {
-    const { label, important } = this.props;
-    const styleSpan = {
-      fontSize: important ? "30px" : "20px",
-      color: important ? "tomato" : "black"
-    };
+    const { label } = this.props;
+    const { done } = this.state;
+    let classNames = "list-item";
+    if (done) {
+      classNames += " done";
+    }
+
     return (
-      <span style={styleSpan} onClick={() => this.onLabelClick()}>
+      <span className={classNames} onClick={this.onLabelClick}>
         {label}
       </span>
     );
