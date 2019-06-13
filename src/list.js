@@ -5,7 +5,7 @@ const List = ({ dataList }) => {
     const { id, ...itemData } = item;
     return (
       <li>
-        <ListItem key={id} {...itemData} />
+        <ListItem key={id} {...itemData} /> {id}
       </li>
     );
   });
