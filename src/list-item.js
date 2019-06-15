@@ -20,10 +20,12 @@ export default class ListItem extends React.Component {
     }
 
     return (
-      <span className={classNames} onClick={this.onLabelClick}>
-        {label}
-        <button onClick={() => onDeleteItem}>DELETE ME</button>
-      </span>
+      <div>
+        <span className={classNames} onClick={this.onLabelClick}>
+          {label}
+        </span>
+        <button>DELETE ME</button>
+      </div>
     );
   }
 }

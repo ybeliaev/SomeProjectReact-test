@@ -10,7 +10,9 @@ export default class App extends React.Component {
       { label: "Read book", important: "true", id: 3 }
     ]
   };
-
+  makeDelete = id => {
+    console.log(id);
+  };
   render() {
     return (
       <div>

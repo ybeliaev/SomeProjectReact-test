@@ -5,7 +5,8 @@ const List = ({ dataList, onDelete }) => {
     const { id, ...itemData } = item;
     return (
       <li>
-        <ListItem key={id} {...itemData} onDeleteItem={onDelete} /> {id}
+        <ListItem key={id} {...itemData} />
+        {id}
       </li>
     );
   });
