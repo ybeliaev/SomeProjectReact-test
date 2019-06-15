@@ -12,7 +12,7 @@ export default class ListItem extends React.Component {
     });
   };
   render() {
-    const { label } = this.props;
+    const { label, onDeleteItem } = this.props;
     const { done } = this.state;
     let classNames = "list-item";
     if (done) {
@@ -22,7 +22,7 @@ export default class ListItem extends React.Component {
     return (
       <span className={classNames} onClick={this.onLabelClick}>
         {label}
-        <button>DELETE ME</button>
+        <button onClick={onDeleteItem}>DELETE ME</button>
       </span>
     );
   }
