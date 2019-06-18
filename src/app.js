@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+
 import List from "./list";
 
 export default class App extends React.Component {
@@ -16,7 +16,7 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <List dataList={this.state.dataList} />
+        <List dataList={this.state.dataList} onDelete={this.makeDelete} />
       </div>
     );
   }
