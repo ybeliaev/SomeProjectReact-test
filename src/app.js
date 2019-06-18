@@ -11,6 +11,9 @@ export default class App extends React.Component {
     ]
   };
   makeDelete = id => {
+    this.setState(({ dataList }) => {
+      const idx = dataList.findIndex(el => el.id === id);
+    });
     console.log(id);
   };
   render() {
