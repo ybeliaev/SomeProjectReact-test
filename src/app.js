@@ -13,8 +13,11 @@ export default class App extends React.Component {
   makeDelete = id => {
     this.setState(({ dataList }) => {
       const idx = dataList.findIndex(el => el.id === id);
+      const before = dataList.slice(0, idx);
+      const after = dataList.slice(idx + 1);
+
+      return { dataList: [...before, ...after] };
     });
-    console.log(id);
   };
   render() {
     return (
