@@ -1,10 +1,10 @@
 import React from "react";
 
-const ItemAddForm = () => {
+const ItemAddForm = ({ onAddItem }) => {
   return (
     <form>
       <input type="text" placeholder="Input name of element" />
-      <button>Add Item</button>
+      <button onClick={() => onAddItem("hello")}>Add Item</button>
     </form>
   );
 };

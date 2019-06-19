@@ -1,8 +1,9 @@
 import React from "react";
 
 import List from "./list";
-
+import ItemAddForm from "./item-add-form";
 export default class App extends React.Component {
+  maxID = 50;
   state = {
     dataList: [
       { label: "Make fitness", important: "true", id: 1 },
@@ -19,10 +20,25 @@ export default class App extends React.Component {
       return { dataList: [...before, ...after] };
     });
   };
+  addItem = text => {
+    console.log(text);
+    const newItem = {
+      label: text,
+      important: false,
+      id: this.maxID++
+    };
+    this.setState(({ dataList }) => {
+      const newArr = [...dataList, newItem];
+      return {
+        dataList: newArr
+      };
+    });
+  };
   render() {
     return (
       <div>
         <List dataList={this.state.dataList} onDelete={this.makeDelete} />
+        <ItemAddForm onAddItem={this.addItem} />
       </div>
     );
   }
