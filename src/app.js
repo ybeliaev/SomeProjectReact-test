@@ -2,6 +2,7 @@ import React from "react";
 
 import List from "./list";
 import ItemAddForm from "./item-add-form";
+import Counter from "./counter";
 export default class App extends React.Component {
   maxID = 50;
   state = {
@@ -39,6 +40,7 @@ export default class App extends React.Component {
       <div>
         <List dataList={this.state.dataList} onDelete={this.makeDelete} />
         <ItemAddForm onAddItem={this.addItem} />
+        <Counter />
       </div>
     );
   }
