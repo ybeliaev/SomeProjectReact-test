@@ -1,5 +1,8 @@
+import styled from 'styled-components'
+import { AppContainer } from './styles'
+
 function App() {
-    return null
+    return <AppContainer>text</AppContainer>
 }
 
 export default App
