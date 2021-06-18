@@ -10,4 +10,4 @@
 
 ### If use Material Icons, so let’s install the material-ui package
 
-> `yarn add @material-ui/icons @material-ui/core`
+-   `yarn add @material-ui/icons @material-ui/core`
