@@ -1,5 +1,11 @@
 import React from 'react'
 
-export const Card = () => {
-    return <div>Card</div>
+import { CardContainer } from './styles'
+
+type CardProps = {
+    text: string
+}
+
+export const Card = ({ text }: CardProps) => {
+    return <CardContainer>{text}</CardContainer>
 }

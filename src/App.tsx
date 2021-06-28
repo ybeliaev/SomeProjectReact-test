@@ -4,12 +4,10 @@ import { Column } from './Column'
 import { Card } from './Card'
 import { AppContainer } from './styles'
 
-const App: FC = ({ children }) => {
+const App: FC = () => {
     return (
         <AppContainer>
-            <Column text="To Do">
-                <Card text="Generate app scaffold" />
-            </Column>
+            <Column text="Generate app scaffold" />
         </AppContainer>
     )
 }
