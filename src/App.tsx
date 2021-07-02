@@ -13,11 +13,15 @@ const App: FC = () => {
                 <Card text="Generate app scaffold" />
             </Column>
             <Column text="In Progress">
-                <Card text="Learn Typescript.." />
+                <Card text="Learn Typescript" />
             </Column>
             <Column text="Done">
                 <Card text="Begin to use static typing" />
             </Column>
+            <AddNewItem
+                toggleButtonText="+ Add another list"
+                onAdd={console.log}
+            />
         </AppContainer>
     )
 }
