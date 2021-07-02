@@ -5,7 +5,7 @@ type NewItemFormProp = {
     onAdd(text: string): void
 }
 
-const NewItemForm = ({ onAdd }: NewItemFormProp) => {
+export const NewItemForm = ({ onAdd }: NewItemFormProp) => {
     const [text, setText] = useState('')
     return (
         <NewItemFormContainer>
@@ -17,5 +17,3 @@ const NewItemForm = ({ onAdd }: NewItemFormProp) => {
         </NewItemFormContainer>
     )
 }
-
-export default NewItemForm

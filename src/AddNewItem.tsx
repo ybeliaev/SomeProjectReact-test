@@ -1,4 +1,5 @@
 import React, { FC, useState } from 'react'
+import { NewItemForm } from './NewItemForm'
 
 import { AddItemButton } from './styles'
 
@@ -8,12 +9,17 @@ type AddNewItemProps = {
     dark?: boolean
 }
 
-const AddNewItem = (props: AddNewItemProps) => {
+export const AddNewItem = (props: AddNewItemProps) => {
     const [showForm, setShowForm] = useState(false)
     const { onAdd, toggleButtonText, dark } = props
 
     if (showForm) {
-        // We show item creation form here
+        ;<NewItemForm
+            onAdd={(text) => {
+                onAdd(text)
+                setShowForm(false)
+            }}
+        />
     }
 
     return (
@@ -22,5 +28,3 @@ const AddNewItem = (props: AddNewItemProps) => {
         </AddItemButton>
     )
 }
-
-export default AddNewItem
